@@ -81,8 +81,8 @@ const quiz = () => {
             <li ref={Option2} onClick={(e)=>{checkans(e,2)}}>{question.option2}</li>
             <li ref={Option3}onClick={(e)=>{checkans(e,3)}}>{question.option3}</li>
             <li ref={Option4} onClick={(e)=>{checkans(e,4)}}>{question.option4}</li>
-            <button onClick={next} >Next</button>
-            <div className='index'> {index+1} of {data.length} questions</div>
+            <button onClick={next}> {index === data.length - 1 ? 'Submit' : 'Next'}
+</button>            <div className='index'> {index+1} of {data.length} questions</div>
         </ul>
         </>
         }
